@@ -1,0 +1,49 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "name": "Gongoli",
+      "price": "15"
+    },
+    {
+      "id": "2",
+      "name": "Khamare",
+      "price": "25"
+    },
+    {
+      "id": "3",
+      "name": "Djeka plant",
+      "price": "35"
+    },
+    {
+      "id": "4",
+      "name": "Moussoyiri",
+      "price": "45"
+    },
+    {
+      "id": "5",
+      "name": "Guenini",
+      "price": "55"
+    },
+    {
+      "id": "6",
+      "name": "Yiri fara",
+      "price": "65"
+    },
+    {
+      "id": "7",
+      "name": "Gongoli babi",
+      "price": "75"
+    },
+    {
+      "id": "8",
+      "name": "Green baya",
+      "price": "85"
+    },
+    {
+      "id": "9",
+      "name": "Dark baya",
+      "price": "95"
+    }
+  ]
+}
