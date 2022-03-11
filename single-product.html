@@ -125,7 +125,7 @@ if (image_id==1) {
               
               <!-- PRODUCT NAME -->
 <script>
-getName("http://localhost:80/p_name");
+getName("172.31.11.68:80/p_name");
 
 async function getName(url) {
   let myObject = await fetch(url);
@@ -137,7 +137,7 @@ async function getName(url) {
               <h6 id="p_price">$55.00</h6>
               <!-- PRODUCT PRICE -->
 <script>
-getPrice("http://localhost:80/productPrice");
+getPrice("172.31.11.68:80/productPrice");
 
 async function getPrice(url) {
   let myObject = await fetch(url);
@@ -152,7 +152,7 @@ async function getPrice(url) {
               <!-- STOCK LEFT -->
               <span id=leftstock></span>
 <script>
-getText("http://localhost:80/pquantity");
+getText("172.31.11.68:80/pquantity");
 
 async function getText(url) {
   let myObject = await fetch(url);
