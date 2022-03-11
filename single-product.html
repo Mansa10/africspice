@@ -84,7 +84,7 @@ https://www.tooplate.com/view/2114-pixie
                <img id="myImg" style="width:400px;height:400px;"> 
                <span id="me"></span>
 <script>
-getImage("http://52.9.144.111/p_image");
+getImage("/p_image");
 
   async function getImage(url) {
   let myObject = await fetch(url);
@@ -94,13 +94,13 @@ getImage("http://52.9.144.111/p_image");
 
 function DisplayImage(image_id) {
 if (image_id==1) {
-  document.getElementById("myImg").src = "http://52.9.144.111/assets/images/product-01.jpg";
+  document.getElementById("myImg").src = "/assets/images/product-01.jpg";
   } else if (image_id==2) {
-  document.getElementById("myImg").src = "http://52.9.144.111/assets/images/product-02.jpg";
+  document.getElementById("myImg").src = "/assets/images/product-02.jpg";
   } else if (image_id==3) {
-  document.getElementById("myImg").src = "http://52.9.144.111/assets/images/product-03.jpg";
+  document.getElementById("myImg").src = "images/product-03.jpg";
   } else if (image_id==4) {
-  document.getElementById("myImg").src = "http://52.9.144.111/assets/images/product-04.jpg";
+  document.getElementById("myImg").src = "images/product-04.jpg";
   } else if (image_id==5) {
   document.getElementById("myImg").src = "http://52.9.144.111/assets/images/product-05.jpg";
   } else if (image_id==6) {
@@ -137,7 +137,7 @@ async function getName(url) {
               <h6 id="p_price">$55.00</h6>
               <!-- PRODUCT PRICE -->
 <script>
-getPrice("http://52.9.144.111/productPrice");
+getPrice("/productPrice");
 
 async function getPrice(url) {
   let myObject = await fetch(url);
@@ -152,7 +152,7 @@ async function getPrice(url) {
               <!-- STOCK LEFT -->
               <span id=leftstock></span>
 <script>
-getText("http://52.9.144.111/pquantity");
+getText("/pquantity");
 
 async function getText(url) {
   let myObject = await fetch(url);

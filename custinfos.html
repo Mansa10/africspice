@@ -91,7 +91,7 @@
             Products
             <span id=p_price></span>
                        <script>
-getText("http://52.9.144.111/p_price");
+getText("/p_price");
 
 async function getText(file) {
   let myObject = await fetch(file);
@@ -101,10 +101,10 @@ async function getText(file) {
 </script>
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-            Taxes
+            Taxes (8.63%)
             <span id=tax></span>
              <script>
-           getText("http://172.31.11.68:80/tax");
+           getText("/tax");
 
 async function getText(file) {
   let myObject = await fetch(file);
@@ -123,7 +123,7 @@ async function getText(file) {
             </div>
             <span id=tp><strong></strong></span>
               <script>
-           getText("http://52.9.144.111/tprice");
+           getText("/tprice");
 
 async function getText(file) {
   let myObject = await fetch(file);
