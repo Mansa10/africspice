@@ -84,7 +84,7 @@ https://www.tooplate.com/view/2114-pixie
                <img id="myImg" style="width:400px;height:400px;"> 
                <span id="me"></span>
 <script>
-getImage("http://localhost:3210/p_image");
+getImage("http://localhost:80/p_image");
 
   async function getImage(url) {
   let myObject = await fetch(url);
@@ -125,7 +125,7 @@ if (image_id==1) {
               
               <!-- PRODUCT NAME -->
 <script>
-getName("http://localhost:3210/p_name");
+getName("http://localhost:80/p_name");
 
 async function getName(url) {
   let myObject = await fetch(url);
@@ -137,7 +137,7 @@ async function getName(url) {
               <h6 id="p_price">$55.00</h6>
               <!-- PRODUCT PRICE -->
 <script>
-getPrice("http://localhost:3210/productPrice");
+getPrice("http://localhost:80/productPrice");
 
 async function getPrice(url) {
   let myObject = await fetch(url);
@@ -152,7 +152,7 @@ async function getPrice(url) {
               <!-- STOCK LEFT -->
               <span id=leftstock></span>
 <script>
-getText("http://localhost:3210/pquantity");
+getText("http://localhost:80/pquantity");
 
 async function getText(url) {
   let myObject = await fetch(url);
