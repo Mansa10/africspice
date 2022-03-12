@@ -39,6 +39,28 @@ app.get('/paymentform.html', function (req, res) {
    res.sendFile( __dirname + "/" + "paymentform.html" );  
 })
 
+// Function update product quantity
+function updatequantity() {
+ fs.readFile('tempProdId.txt', function(err, data) {
+    if (err) throw err; 
+     const id = data;    
+   fs.readFile('tempQuant.txt', function(err, data) {
+      if (err) throw err; 
+      const quantity = data; 
+     fs.readFile('stock.json', function(err, data) {
+        if (err) throw err; 
+        const obj = JSON.parse(data);
+        const newQuant = obj.stock[id-1].quantity-quantity; 
+        obj.stock[id-1].quantity = newQuant;
+       fs.writeFile('stock.json', JSON.stringify(obj, null, 2) , function (err) {
+         if (err) throw err;
+
+         });
+        });
+       });
+      }); 
+}
+
 // get single-product price
  app.get('/productPrice', urlencodedParser, function (req, res) {  
    fs.readFile('tempProdId.txt', function(err, data) {
@@ -111,20 +133,6 @@ switch (req.params.var) {
     break;
   case "confirmp":   
     
-//query update quantity 
- fs.readFile('tempProdId.txt', function(err, data) {
-    if (err) throw err; 
-     const id = data;    
-   fs.readFile('tempQuant.txt', function(err, data) {
-      if (err) throw err; 
-      const quantity = data; 
-     fs.readFile('stock.json', function(err, data) {
-        if (err) throw err; 
-        const obj = JSON.parse(data);
-        const newQuant = obj.stock[id-1].quantity-quantity; 
-        obj.stock[id-1].quantity = newQuant;
-       fs.writeFile('stock.json', JSON.stringify(obj, null, 2) , function (err) {
-         if (err) throw err;
                       // send email
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -150,10 +158,8 @@ transporter.sendMail(mailOptions, function(error, info){
   } 
 });
                // End send message
-         });
-        });
-       });
-      });
+       
+    updatequantity();
     res.redirect('/index.html');
     break;
  }  

@@ -16,13 +16,13 @@
           <div class="row mb-4">
             <div class="col">
               <div class="form-outline">
-                <input type="text" id="form7Example1" class="form-control" name="fname" />
+                <input type="text" id="form7Example1" class="form-control" name="fname" required/>
                 <label class="form-label" for="form7Example1">First name</label>
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
-                <input type="text" id="form7Example2" class="form-control" name="lname"/>
+                <input type="text" id="form7Example2" class="form-control" name="lname" required/>
                 <label class="form-label" for="form7Example2">Last name</label>
               </div>
             </div>
@@ -30,25 +30,25 @@
 
           <!-- Text input -->
           <div class="form-outline mb-4">
-            <input type="text" id="form7Example3" class="form-control" name="email"/>
+            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="form7Example3" class="form-control" name="email" required/>
             <label class="form-label" for="form7Example3">Email</label>
           </div>
 
           <!-- Text input -->
           <div class="form-outline mb-4">
-            <input type="text" id="form7Example4" class="form-control" name="address"/>
+            <input type="text" id="form7Example4" class="form-control" name="address" required/>
             <label class="form-label" for="form7Example4">Address</label>
           </div>
 
           <!-- Email input -->
           <div class="form-outline mb-4">
-            <input type="email" id="form7Example5" class="form-control" name="apartment"/>
+            <input type="text" id="form7Example5" class="form-control" name="apartment" required/>
             <label class="form-label" for="form7Example5">Apartment(optional)</label>
           </div>
 
           <!-- Number input -->
           <div class="form-outline mb-4">
-            <input type="number" id="form7Example6" class="form-control" name="city"/>
+            <input type="text" id="form7Example6" class="form-control" name="city" required/>
             <label class="form-label" for="form7Example6">City</label>
           </div>
           
@@ -56,7 +56,7 @@
           <div class="row mb-4">
             <div class="col">
               <div class="form-outline">
-                <input type="text" id="form7Example1" class="form-control" name="country"/>
+                <input type="text" id="form7Example1" class="form-control" name="country" required/>
                 <label class="form-label" for="form7Example1">Country/region</label>
               </div>
             </div>
@@ -68,7 +68,7 @@
             </div>
             <div class="col">
               <div class="form-outline">
-                <input type="text" id="form7Example3" class="form-control" name="zip"/>
+                <input type="text" pattern="[0-9].{5}" id="form7Example3" class="form-control" name="zip" required/>
                 <label class="form-label" for="form7Example3">ZIP code</label>
               </div>
             </div>
@@ -96,7 +96,7 @@ getText("/p_price");
 async function getText(file) {
   let myObject = await fetch(file);
   let myText = await myObject.text();
-  document.getElementById("p_price").innerHTML = "$ " + myText;  
+  document.getElementById("p_price").innerHTML = "$ " + JSON.parse(myText);  
 }    
 </script>
           </li>
@@ -109,7 +109,7 @@ async function getText(file) {
 async function getText(file) {
   let myObject = await fetch(file);
   let myText = await myObject.text();
-  document.getElementById("tax").innerHTML = "$ " + myText;  
+  document.getElementById("tax").innerHTML = "$ " + JSON.parse(myText);  
 }    
 </script>   
           </li>
@@ -128,7 +128,7 @@ async function getText(file) {
 async function getText(file) {
   let myObject = await fetch(file);
   let myText = await myObject.text();
-  document.getElementById("tp").innerHTML = "$ " +  myText;  
+  document.getElementById("tp").innerHTML = "$ " +  JSON.parse(myText);  
 }    
 </script> 
           </li>
