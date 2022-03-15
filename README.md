@@ -6,9 +6,10 @@ African Spice is an ecmmoerce webiste that sells African spices.
 My sister had the project to sell some African spices online while I was looking for a project for my Object Oriented Analysis and Desin class.
 So I decided to choose it as my project. Here is the Desin Document WWW.bcv.jcvjc  
 
-Technologies used: HTLM5/CSS3, Javascript, Node.js.
+Technologies used: HTLM5/CSS3/Bootstrap v4.1.3 , Javascript, Node.js.
+I've donloaded the front end Template from www.tooplate.com.
 
-Now I'm working on the login system.
+Now I'm working on the log-in/Sign-up system.
 
 3. How to Install and Run the Project
 
@@ -17,4 +18,3 @@ Create a folder
 Download the project inside the folder
 Initiated Node.js in the folder
 Type the following command to start the server: npm start
-
