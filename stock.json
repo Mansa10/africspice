@@ -2,39 +2,39 @@
   "stock": [
     {
       "productId": "1",
-      "quantity": 23
+      "quantity": 30
     },
     {
       "productId": "2",
-      "quantity": 15
+      "quantity": 25
     },
     {
       "productId": "3",
-      "quantity": 24
+      "quantity": 25
     },
     {
       "productId": "4",
-      "quantity": 21
+      "quantity": 25
     },
     {
       "productId": "5",
-      "quantity": 22
+      "quantity": 30
     },
     {
       "productId": "6",
-      "quantity": "25"
+      "quantity": 25
     },
     {
       "productId": "7",
-      "quantity": "25"
+      "quantity": 25
     },
     {
       "productId": "8",
-      "quantity": 22
+      "quantity": 25
     },
     {
       "productId": "9",
-      "quantity": 24
+      "quantity": 30
     }
   ]
 }

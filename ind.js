@@ -59,6 +59,32 @@ function updatequantity() {
         });
        });
       }); 
+  }
+
+// send email
+function sendemail(email, name, address) {
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'moussabamba1920@gmail.com',
+    pass: 'wuqhmuhyczozgcqb'
+  }
+});
+
+var mailOptions = {
+  from: 'moussabamba1920@gmail.com',
+  to: 'moussa1920@yahoo.fr',
+  subject: email,
+  text: 'Thank you ' + name + ', this is to confirm that a transaction has been processed. Your order will be shipped at this address: ' + address 
+};
+
+transporter.sendMail(mailOptions, function(error, info) {
+  if (error) { 
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  } 
+});   
 }
 
 // get single-product price
@@ -132,36 +158,10 @@ switch (req.params.var) {
     res.redirect('/paymentform.html');
     break;
   case "confirmp":   
-    
-                      // send email
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'moussabamba1920@gmail.com',
-    pass: 'wuqhmuhyczozgcqb'
-  }
-});
-
-var mailOptions = {
-  from: 'moussabamba1920@gmail.com',
-  to: email,
-  subject: 'Order Confirmation',
-  text: 'Thank you ' + name + ', this is to confirm that a transaction has been processed. Your order will be shipped at this address: ' + address
-
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) { 
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  } 
-});
-               // End send message
-       
     updatequantity();
+    sendemail(email, name, address);  
     res.redirect('/index.html');
-    break;
+    break; // africspice
  }  
 })
 
